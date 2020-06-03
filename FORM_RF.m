@@ -3,7 +3,7 @@ function [u_standard, beta_final, p_f] = FORM_RF(g, variables_list, dist, init_s
 %{
 ---------------------------------------------------------------------------
 Created by: Iago Pereira Lemos (lemosiago123@gmail.com)
-Federal University of Uberlândia, School of mechanical engineering
+Federal University of UberlÃ¢ndia, School of mechanical engineering
 ---------------------------------------------------------------------------
 Inputs
 g: limit state function
@@ -67,7 +67,7 @@ while true
     derivate = double(subs(dg, variables_list, search_point));
     partial_derivate = derivate'.*N_std;
     
-    %4 step´: Computing the new design point in the standard space
+    %4 stepÂ´: Computing the new design point in the standard space
     esc1 = 1/sum(partial_derivate.*partial_derivate);
     esc2 = sum(partial_derivate.*design_point_standard) - double(subs(g, variables_list, search_point));
     esc3 = esc1 * esc2;
@@ -100,7 +100,7 @@ n_iterations = j;                         %taking the number of iterations
 p_f = normcdf(-beta_final);               %taking the failure probability
 
 %% Printing results
-fprintf('Using the Hasofer-Lind-Rackwitz-Fiessler algorithm for implicit limit state functions:\n');
+fprintf('Using the Rackwitz-Fiessler algorithm for implicit limit state functions:\n');
 fprintf('Iterations: %g\nReliability index = %g\nFailure probability = %g\n\n', n_iterations, beta_final, p_f);
 
 return
