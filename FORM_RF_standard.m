@@ -3,7 +3,7 @@ function [u_standard, beta, p_f] = FORM_RF_standard(g,variables_list)
 %{
 ---------------------------------------------------------------------------
 Created by: Iago Pereira Lemos (lemosiago123@gmail.com)
-Federal University of Uberl‚ndia, School of mechanical engineering
+Federal University of Uberl√¢ndia, School of mechanical engineering
 ---------------------------------------------------------------------------
 Inputs
 g: limit state function
@@ -52,7 +52,7 @@ n_iterations = k;
 p_f = normcdf(-beta);
 u_standard = x(:,k);
 
-fprintf('Using the Hasofer-Lind-Rackwitz-Fiessler algorithm for standard limit state functions:\n');
+fprintf('Using the Rackwitz-Fiessler algorithm for standard limit state functions:\n');
 fprintf('Iterations: %g\nReliability index = %g\nFailure probability = %g\n\n', n_iterations, beta, p_f);
 
 return;
