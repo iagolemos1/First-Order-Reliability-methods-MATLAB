@@ -13,5 +13,4 @@ There 4 files:
 
 **Observations:** 
 * As the Newton-Raphson scheme may fail to converge, also the Rackwitz-Fiessler algorithm may fail too;
-* Examples for running the solver will be availabe as soon as possible. 
 
