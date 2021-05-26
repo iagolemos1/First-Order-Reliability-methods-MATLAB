@@ -55,7 +55,6 @@ beta = ones(1,maxit);             %initializing beta array for comparison
 while true
     % 1 step: Verify which variable is not normal and transform it to
     %considering the search point using the Rosenblatt transformation
-    non_normal2normal = ones(1, length(dist));
     k = 0;
     for i=1:1:length(dist)
         if strcmp(class(dist(i)), class(makedist('Normal'))) == 0
